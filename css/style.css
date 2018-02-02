@@ -1,0 +1,490 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Basic */
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('../fonts/HelveticaNeue-Bold.otf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('../fonts/HelveticaNeue-Light.otf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('../fonts/HelveticaNeue.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+	font-size: 18px;
+}
+
+body {
+	color: #000;
+	font-size: 18px;
+	font-family: "HelveticaNeue";
+	line-height: 1.2;
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+    	width: 1180px;
+    }
+}
+
+.pull-left {
+	float: left;
+}
+
+.pull-right {
+	float: right;
+}
+
+/* Header */
+.main-header {
+	width: 100%;
+	height: 120px;
+	padding: 10px 50px;
+}
+
+.logo img {
+	max-height: 100px;
+	height: 100px;
+}
+
+.header-right {
+	max-width: 200px;
+	width: 200px;
+	height: 100%;
+    padding-top: 15px;
+}
+
+.header-info {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.header-info div {
+	display: inline-block;
+}
+
+.header-info i {
+	margin-right: 5px;
+}
+
+.header-right .searh-wrapper {
+	position: relative;
+}
+
+.header-right .searh-wrapper i {
+	position: absolute;
+    font-size: 22px;
+    top: 10px;
+    left: 40px;
+}
+
+.header-right .searh-wrapper input {
+	padding: 10px;
+    width: 100%;
+	padding-left: 65px;
+    font-size: 16px;
+}
+
+.header-right .searh-wrapper input::placeholder {
+	color: #000;
+}
+
+.main-menu {
+	padding: 0 20px;
+	height: 100%;
+}
+
+.main-menu ul {
+	list-style: none;
+}
+
+.main-menu ul li {
+	display: inline-block;
+}
+
+.main-menu ul li a {
+	color: #000;
+	padding: 0 5px;
+	text-transform: uppercase;
+	font-size: 15px;
+	line-height: 140px;
+}
+
+/* Banner */
+.banner img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+/* Big text */
+.collections {
+	padding: 20px 50px;
+	margin-bottom: 70px;
+}
+
+.big-text {
+	margin-top: 68px;
+	border-top: 2px solid #E2E2E2;
+}
+
+.big-text h2 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	padding: 30px 0;
+    margin-bottom: 0;
+}
+
+.big-text .quote {
+	padding-left: 55px;
+	position: relative;
+}
+
+.big-text .quote img {
+    position: absolute;
+    width: 45px;
+    left: 0;
+    top: -10px;
+}
+
+.big-text .quote p {
+	font-size: 18px;
+	margin-bottom: 10px;
+	color: #3D3D3D;
+}
+
+.big-text .quote .signature {
+	color: #000;
+}
+
+/* Tab Container */
+.prod-tab-container {
+	width: 100%;
+	padding-top: 40px;
+}
+
+.tab-links {
+	width: 100%;
+	padding: 40px 0 60px 0;
+}
+
+.tab-links li {
+	display: inline-block;
+}
+
+.tab-links li a {
+	font-size: 20px;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: #000;
+	padding: 0 60px;
+}
+
+.tab-links li a.current {
+	font-weight: bold;
+}
+
+.prod-tab-container {
+	margin-bottom: -30px;
+}
+
+.prod-tab-container .prod-tab-content {
+	display: none;
+	width: 100%;
+}
+
+.prod-tab-container .prod-tab-content.current {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.prod-tab-container .block {
+	margin-bottom: 100px;
+	padding: 20px;
+}
+
+.prod-tab-container .block .img-box img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+.prod-tab-container .block .info {
+	padding-top: 10px;
+	width: 100%;
+}
+
+.prod-tab-container .block .info .prod-left {
+	max-width: 62%;
+}
+
+.prod-tab-container .block .info .prod-left h4 {
+	font-size: 1.3rem;
+	margin-bottom: 10px;
+}
+
+.prod-tab-container .block .info .prod-left h4 a {
+	color: #000;
+}
+
+.prod-tab-container .block .info .prod-left .price-box span {
+	display: block;
+}
+
+.prod-tab-container .block .info .prod-left .price-box .old-price {
+	font-size: 1rem;
+}
+
+.prod-tab-container .block .info .prod-left .price-box .price {
+	font-size: 1.5rem;
+	color: #FF2222;
+}
+
+.prod-tab-container .block .info .buy-button {
+	padding-top: 30px;
+}
+
+.prod-tab-container .block .info .buy-button a {
+	font-weight: bold;
+	font-size: 1.3rem;
+	padding: 8px 4px;
+	color: #FF2222;
+	border: 1px solid #FF2222;
+	display: block;
+	text-transform: uppercase;
+}
+
+.collections .more {
+	color: #000;
+    font-size: 1.5rem;
+    padding: 15px 45px;
+    border: 2px solid #E2E2E2;
+    margin: 0 auto;
+}
+
+/* Home New */
+.home-new {
+	padding: 20px 50px 100px 50px;
+    border-bottom: 1px solid #E2E2E2;
+    margin-bottom: 20px;
+}
+
+.home-new .block {
+	margin-bottom: 20px;
+}
+
+.home-new img {
+	width: 100%;
+	height: auto;
+}
+
+.home-new-title {
+	text-align: center;
+	padding: 20px 0;
+}
+
+.home-new-title a {
+	color: #000;
+	font-size: 1.1rem;
+	text-align: center;
+	font-weight: bold;
+}
+
+/* Footer */
+.footer-1 {
+	padding: 20px 50px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #E2E2E2;
+}
+
+.footer-1 .block {
+	margin-bottom: 20px;
+}
+
+.footer-1 h5 {
+	text-align: center;
+	font-size: 30px;
+	margin-bottom: 50px;
+}
+
+.footer-1 p {
+	margin-bottom: 15px;
+}
+
+.footer-1 p i {
+	float: left;
+	margin-right: 5px;
+}
+
+.footer-1 p div {
+	padding-left: 32px;
+}
+
+.footer-2 .social-icon i {
+	margin-right: 10px;
+	font-size: 1.5rem;
+}
+
+.footer-3 h5 {
+	text-align: left;
+}
+
+#dangky input {
+	width: 80%;
+    padding: 1rem;
+}
+
+#dangky button {
+	width: 20%;
+    float: right;
+    padding: 1.05rem 0.375rem;
+    border: 1px solid;
+    background: none;
+    border-radius: 0px;
+}
+
+/* 2. Gioi thieu */
+
+/* Intro Top */
+.intro-top {
+	padding: 0 50px;
+}
+
+.intro-top img {
+	width: 100%;
+	height: auto;
+}
+
+.intro-top .intro-info {
+	padding: 40px;
+	text-align: center;
+	background: #eeeeee;
+	margin-bottom: 40px;
+}
+
+.intro-top .intro-info h5 {
+	font-weight: bold;
+	text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.intro-top .more, .home-new .more {
+    color: #000;
+    font-size: 1.5rem;
+    padding: 15px 45px;
+    border: 2px solid #E2E2E2;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.intro-new-top {
+	margin: 40px auto;
+    text-align: center;
+    position: relative;
+}
+
+.intro-new-top:before {
+    left: -220px;
+    top: 15px;
+}
+
+.intro-new-top:after {
+	top: 15px;
+	right: -220px;
+}
+
+.intro-new-top:before, .intro-new-top:after {
+	content: "";
+	position: absolute;
+	height: 2px;
+	background: #E2E2E2;
+	width: 200px;
+}
+
+.intro-new-top h5 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.intro-new-tab-content {
+	display: none;
+	margin-bottom: 50px;
+}
+
+.intro-new-tab-content.current {
+	display: inherit;
+}
+
+
+/* Responsive */
+@media only screen and (max-width: 1200px) {
+    .prod-tab-container .block .info .prod-left {
+	    max-width: 100%;
+	}
+}
